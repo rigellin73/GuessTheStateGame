@@ -1,5 +1,5 @@
 from turtle import Screen
-from map import MAP_SHAPE
+from states_map import MAP_SHAPE
 
 SCREEN_WIDTH = 750
 SCREEN_HEIGHT = 500

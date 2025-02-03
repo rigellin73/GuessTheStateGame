@@ -1,7 +1,7 @@
 from game_screen import setup_screen
-from map import Map
+from states_map import StatesMap
 
 game_screen = setup_screen()
-map = Map()
+states_map = StatesMap()
 
 game_screen.exitonclick()
