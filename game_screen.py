@@ -4,8 +4,8 @@ from states_map import MAP_SHAPE
 SCREEN_WIDTH = 750
 SCREEN_HEIGHT = 500
 SCREEN_TITLE = "U.S. States Game"
-DIALOG__WINDOW_TITLE = "Input"
-DIALOG_WINDOW_PROMPT = "Enter state name"
+DIALOG__WINDOW_TITLE = "Guess the State"
+DIALOG_WINDOW_PROMPT = "What's another state's name?"
 
 class GameScreen():
     def __init__(self):

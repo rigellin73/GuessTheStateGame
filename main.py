@@ -19,8 +19,6 @@ while not game_over:
             states_map.add_state(input_name,state_position)
             if input_name not in guessed_states:
                 guessed_states.append(input_name)
-        else:
-            print("no such state")
     else:
         game_over = True
 
