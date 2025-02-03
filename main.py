@@ -1,8 +1,6 @@
 from game_screen import GameScreen
-from states_map import StatesMap
+from states_map import StatesMap, NUMBER_OF_STATES
 from states_data import StatesData
-
-NUMBER_OF_STATES = 50
 
 game_screen = GameScreen()
 states_map = StatesMap()
@@ -21,6 +19,7 @@ while not game_over:
             states_map.add_state(input_name,state_position)
     except AttributeError:
         game_over = True
+        states_map.show_lose_message()
 
     if guessed_states == NUMBER_OF_STATES:
         game_over = True

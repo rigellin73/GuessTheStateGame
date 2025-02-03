@@ -1,8 +1,8 @@
 from turtle import Screen
-from states_map import MAP_SHAPE
 
 SCREEN_WIDTH = 750
-SCREEN_HEIGHT = 500
+SCREEN_HEIGHT = 600
+MAP_SHAPE = "blank_states_img.gif"
 SCREEN_TITLE = "U.S. States Game"
 DIALOG_WINDOW_PROMPT = "What's another state's name?"
 
@@ -17,7 +17,4 @@ class GameScreen():
         self.screen.title(SCREEN_TITLE)
 
     def ask_for_input(self, dialog_window_title):
-        try:
-            return self.screen.textinput(dialog_window_title, DIALOG_WINDOW_PROMPT)
-        except AttributeError:
-            return ""
+        return self.screen.textinput(dialog_window_title, DIALOG_WINDOW_PROMPT)
