@@ -11,6 +11,6 @@ class StatesMap:
         self.s_name.hideturtle()
         self.s_name.penup()
 
-    def add_state(self, state_name, x, y):
-        self.s_name.goto(x, y)
+    def add_state(self, state_name, position):
+        self.s_name.goto(position)
         self.s_name.write(state_name, False, ALIGN, FONT)

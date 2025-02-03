@@ -6,5 +6,11 @@ class StatesData:
     def __init__(self):
         self.data = pandas.read_csv(DATA_FILE)
 
-    def find_state(self, name):
-        return self.data[self.data.state == name]
+    def get_state_position(self, name):
+        state_info = self.data[self.data.state == str(name)]
+        try:
+            pos = (state_info.x.item(), state_info.y.item())
+        except ValueError:
+            pos = ()
+
+        return pos
