@@ -12,6 +12,7 @@ class StatesMap:
         self.s_name = Turtle()
         self.s_name.hideturtle()
         self.s_name.penup()
+        self.guessed_states = []
 
     def write_text(self, text, position, align, font):
         self.s_name.goto(position)
@@ -19,7 +20,12 @@ class StatesMap:
 
     def add_state(self, state_name, position):
         self.write_text(state_name, position, ALIGN, STATE_TEXT_FONT)
+        if state_name not in self.guessed_states:
+            self.guessed_states.append(state_name)
 
     def show_win_message(self):
         self.s_name.clear()
         self.write_text(WIN_MESSAGE, (0, 0), ALIGN, WIN_TEXT_FONT)
+
+    def get_number_of_guessed_states(self):
+        return len(self.guessed_states)
