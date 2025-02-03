@@ -25,4 +25,6 @@ while not game_over:
         game_over = True
         states_map.show_win_message()
 
+states_data.export_not_guessed_states_csv(states_map.guessed_states)
+
 game_screen.screen.exitonclick()
