@@ -16,4 +16,7 @@ class GameScreen():
         self.screen.title(SCREEN_TITLE)
 
     def ask_for_input(self):
-        return self.screen.textinput(title="Input", prompt="Enter state name").title()
+        try:
+            return self.screen.textinput(title="Input", prompt="Enter state name").title()
+        except AttributeError:
+            return ""

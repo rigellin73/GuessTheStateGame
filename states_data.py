@@ -7,10 +7,12 @@ class StatesData:
         self.data = pandas.read_csv(DATA_FILE)
 
     def get_state_position(self, name):
-        state_info = self.data[self.data.state == str(name)]
-        try:
-            pos = (state_info.x.item(), state_info.y.item())
-        except ValueError:
-            pos = ()
+        pos = ()
+        if name:
+            state_info = self.data[self.data.state == str(name)]
+            try:
+                pos = (state_info.x.item(), state_info.y.item())
+            except ValueError:
+                pass
 
         return pos
