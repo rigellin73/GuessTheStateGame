@@ -12,10 +12,10 @@ game_over = False
 
 while not game_over:
     guessed_states = states_map.get_number_of_guessed_states()
-    dialogue_window_title = f"{guessed_states}/{NUMBER_OF_STATES} States Correct"
+    dialog_window_title = f"{guessed_states}/{NUMBER_OF_STATES} States Correct"
 
     try:
-        input_name = game_screen.ask_for_input(dialogue_window_title).title()
+        input_name = game_screen.ask_for_input(dialog_window_title).title()
         state_position = states_data.get_state_position(input_name)
         if state_position:
             states_map.add_state(input_name,state_position)

@@ -16,8 +16,8 @@ class GameScreen():
         self.screen.addshape(MAP_SHAPE)
         self.screen.title(SCREEN_TITLE)
 
-    def ask_for_input(self, dialogue_window_title):
+    def ask_for_input(self, dialog_window_title):
         try:
-            return self.screen.textinput(dialogue_window_title, DIALOG_WINDOW_PROMPT)
+            return self.screen.textinput(dialog_window_title, DIALOG_WINDOW_PROMPT)
         except AttributeError:
             return ""
