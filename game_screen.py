@@ -4,6 +4,8 @@ from states_map import MAP_SHAPE
 SCREEN_WIDTH = 750
 SCREEN_HEIGHT = 500
 SCREEN_TITLE = "U.S. States Game"
+DIALOG__WINDOW_TITLE = "Input"
+DIALOG_WINDOW_PROMPT = "Enter state name"
 
 class GameScreen():
     def __init__(self):
@@ -17,6 +19,6 @@ class GameScreen():
 
     def ask_for_input(self):
         try:
-            return self.screen.textinput(title="Input", prompt="Enter state name").title()
+            return self.screen.textinput(DIALOG__WINDOW_TITLE, DIALOG_WINDOW_PROMPT).title()
         except AttributeError:
             return ""
